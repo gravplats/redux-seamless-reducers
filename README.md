@@ -32,11 +32,15 @@ export default handle({
 
 ### handle(reducerMap [, defaultState])
 
-#### `reducerMap`
+#### reducerMap
+
+Type: `object`
 
 An action-type-to-reducer map.
 
-#### `defaultState`
+#### defaultState
+
+Type: `object`
 
 The default state of the reducer.
 
