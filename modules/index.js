@@ -7,7 +7,6 @@ function isFunction(val) {
     return typeof val === 'function';
 }
 
-
 function handle(type, reducers) {
     return (state, action) => {
         if (action.type !== type) {
@@ -29,7 +28,6 @@ function handle(type, reducers) {
             : state;
     };
 }
-
 
 export default function(reducers, defaultState = {}) {
     const handlers = Object.keys(reducers).map((type) => handle(type, reducers[type]));
