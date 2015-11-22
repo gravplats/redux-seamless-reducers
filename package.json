@@ -1,6 +1,6 @@
 {
   "name": "redux-seamless-reducers",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Integrate seamless-immutable with Redux",
   "license": "MIT",
   "keywords": [
