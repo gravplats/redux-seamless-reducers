@@ -3,11 +3,9 @@ import reduceReducers from 'reduce-reducers';
 import Immutable from 'seamless-immutable';
 
 
-function isFunction(val) {
-    return typeof val === 'function';
-}
+const isFunction = (obj) => typeof obj === 'function';
 
-function handle(type, reducers) {
+const handle = (type, reducers) => {
     return (state, action) => {
         if (action.type !== type) {
             return state;
@@ -27,9 +25,9 @@ function handle(type, reducers) {
             ? Immutable(reducer(state, action))
             : state;
     };
-}
+};
 
-export default function(reducers, defaultState = {}) {
+export default (reducers, defaultState = {}) => {
     const handlers = Object.keys(reducers).map((type) => handle(type, reducers[type]));
     return (state = Immutable(defaultState), action) => reduceReducers(...handlers)(state, action);
-}
+};
