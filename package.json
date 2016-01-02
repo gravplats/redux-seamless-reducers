@@ -3,25 +3,17 @@
   "version": "0.1.1",
   "description": "Integrate seamless-immutable with Redux",
   "license": "MIT",
+  "repository": "mrydengren/redux-seamless-reducers",
   "keywords": [
     "Redux",
     "seamless-immutable"
   ],
-  "repository": "mrydengren/redux-seamless-reducers",
   "main": "lib/index",
   "jsnext:main": "modules/index",
   "files": [
     "lib",
     "modules"
   ],
-  "scripts": {
-    "clean": "rimraf ./lib",
-    "build": "npm run clean && ./node_modules/.bin/babel ./modules -d lib --ignore *.ava.js",
-    "pretest": "./node_modules/.bin/eslint ./modules",
-    "test": "npm run build && ./node_modules/.bin/ava ./modules/**/*.ava.js",
-    "preversion": "npm test",
-    "prepublish": "npm run build"
-  },
   "dependencies": {
     "flux-standard-action": "^0.6.0",
     "reduce-reducers": "^0.1.1",
@@ -38,5 +30,15 @@
     "eslint-config-billogram": "^0.2.0",
     "redux": "^3.0.5",
     "rimraf": "^2.5.0"
+  },
+  "scripts": {
+    "ava": "./scripts/run-ava.sh",
+    "eslint": "./scripts/run-eslint.sh",
+    "build": "./scripts/run-build.sh",
+    "pretest": "./scripts/run-eslint.sh",
+    "test": "./scripts/run-ava.sh",
+    "posttest": "./scripts/run-build.sh",
+    "preversion": "npm test",
+    "prepublish": "./scripts/run-build.sh"
   }
 }
