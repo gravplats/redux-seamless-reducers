@@ -17,8 +17,6 @@ test('default state should be immutable', (t) => {
     store.dispatch({ type });
 
     t.true(Immutable.isImmutable(store.getState().test));
-
-    t.end();
 });
 
 test('modified state should be immutable', (t) => {
@@ -33,8 +31,6 @@ test('modified state should be immutable', (t) => {
     store.dispatch({ type });
 
     t.true(Immutable.isImmutable(store.getState().test));
-
-    t.end();
 });
 
 test('returns state for unknown action', (t) => {
@@ -49,8 +45,6 @@ test('returns state for unknown action', (t) => {
     store.dispatch({ type: 'unknown action type' });
 
     t.same(store.getState().test, DefaultState);
-
-    t.end();
 });
 
 test('uses next() if action is not an error', (t) => {
@@ -70,8 +64,6 @@ test('uses next() if action is not an error', (t) => {
     store.dispatch({ type });
 
     t.true(wasCalled);
-
-    t.end();
 });
 
 test('uses throw() if action is an error', (t) => {
@@ -91,6 +83,4 @@ test('uses throw() if action is an error', (t) => {
     store.dispatch({ type, error: true });
 
     t.true(wasCalled);
-
-    t.end();
 });
