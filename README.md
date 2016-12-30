@@ -4,28 +4,36 @@
 
 [![npm version](https://img.shields.io/npm/v/redux-seamless-reducers.svg?style=flat-square)](https://www.npmjs.com/package/redux-seamless-reducers)
 
-Borrows heavily from [redux-actions](https://github.com/acdlite/redux-actions).
+Wraps the default state and the results of calling `handleActions` from [redux-actions](https://github.com/acdlite/redux-actions) in an `Immutable`.
 
 ## Install
+
+Using npm.
 
 ```
 npm install --save redux-seamless-reducers
 ```
 
+Using yarn.
+
+```
+yarn add redux-seamless-reducers
+```
+
 ## Usage
 
 ```js
-import handle from 'redux-seamless-reducers';
+import { handleActions } from 'redux-seamless-reducers';
 
 const DefaultState = {};
 
-export default handle({
-
+const actions = {
     'ACTION': (state, action) => {
         return { ...state };
     }
+};
 
-}, DefaultState);
+export default handleActions(actions, DefaultState);
 ```
 
 ## Pitfalls
@@ -52,9 +60,9 @@ _.map(this.props.myImmutableArray, this.renderItemInArray)
 
 ## API
 
-### handle(reducerMap [, defaultState])
+### handleActions(handlers [, defaultState])
 
-#### reducerMap
+#### handlers
 
 Type: `object`
 
