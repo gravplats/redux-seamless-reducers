@@ -16,8 +16,10 @@
   ],
   "dependencies": {
     "flux-standard-action": "^0.6.1",
-    "reduce-reducers": "^0.1.2",
-    "seamless-immutable": "^6.1.0"
+    "reduce-reducers": "^0.1.2"
+  },
+  "peerDependencies": {
+    "seamless-immutable": ">=6.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.10.1",
@@ -29,6 +31,7 @@
     "eslint-config-coderesque": "^2.2.0",
     "faucet": "^0.0.1",
     "redux": "^3.0.5",
+    "seamless-immutable": ">=6.0.0",
     "tape": "^4.6.3"
   },
   "scripts": {
