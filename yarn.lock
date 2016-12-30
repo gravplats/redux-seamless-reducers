@@ -976,9 +976,9 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-config-coderesque@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-coderesque/-/eslint-config-coderesque-3.0.0.tgz#bfe2adc1fc217fec95ec275ce5d2d0b04294adc4"
+eslint-config-coderesque@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-coderesque/-/eslint-config-coderesque-3.0.1.tgz#7b1ad256cbd81135804216f118b0487cba5696d1"
   dependencies:
     eslint-plugin-import "^2.2.0"
     eslint-plugin-react "^6.8.0"
