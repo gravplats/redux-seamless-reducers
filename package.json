@@ -17,8 +17,7 @@
     "modules"
   ],
   "dependencies": {
-    "flux-standard-action": "^1.0.0",
-    "reduce-reducers": "^0.1.2"
+    "redux-actions": "^1.2.0"
   },
   "peerDependencies": {
     "seamless-immutable": ">=6.0.0"
