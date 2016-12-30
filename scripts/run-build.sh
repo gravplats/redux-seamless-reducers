@@ -1,4 +1,4 @@
 #!/bin/bash
 
-rimraf ./lib
-babel ./modules -d lib --ignore *.ava.js
+rm -rf ./lib
+babel ./modules -d lib --ignore *.tape.js
