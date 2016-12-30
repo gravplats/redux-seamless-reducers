@@ -3,14 +3,14 @@ import test from 'tape';
 import { combineReducers, createStore } from 'redux';
 import Immutable from 'seamless-immutable';
 
-import handle from './index';
+import handleActions from './handleActions';
 
 
 test('default state should be immutable', (t) => {
     const DefaultState = { value: 0 };
 
     const type = 'action type';
-    const test = handle({ [type]: (state) => state }, DefaultState);
+    const test = handleActions({ [type]: (state) => state }, DefaultState);
 
     const root = combineReducers({ test });
 
@@ -25,7 +25,7 @@ test('modified state should be immutable', (t) => {
     const DefaultState = { value: 0 };
 
     const type = 'action type';
-    const test = handle({ [type]: (state) => ({ ...state }) }, DefaultState);
+    const test = handleActions({ [type]: (state) => ({ ...state }) }, DefaultState);
 
     const root = combineReducers({ test });
 
