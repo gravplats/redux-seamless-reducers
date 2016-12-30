@@ -17,7 +17,7 @@
     "modules"
   ],
   "dependencies": {
-    "flux-standard-action": "^0.6.1",
+    "flux-standard-action": "^1.0.0",
     "reduce-reducers": "^0.1.2"
   },
   "peerDependencies": {
