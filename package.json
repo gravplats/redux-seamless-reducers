@@ -10,7 +10,7 @@
   ],
   "main": "lib/index",
   "module": "es/index",
-  "jsnext:main": "modules/index",
+  "jsnext:main": "es/index",
   "files": [
     "es",
     "lib",
